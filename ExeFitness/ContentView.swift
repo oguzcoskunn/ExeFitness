@@ -12,6 +12,8 @@ struct ContentView: View {
     var Day2 = [ProgramContent]()
     var Day3 = [ProgramContent]()
     var Day4 = [ProgramContent]()
+    var dateComponents = DateComponents()
+
     
     init() {
         // Day 1
@@ -49,41 +51,80 @@ struct ContentView: View {
         self.Day4.append(ReverseCrunch)
         self.Day4.append(ToeTouches)
         self.Day4.append(Plank)
+        
+        
+        self.dateComponents.year = 2016
+        self.dateComponents.month = 11
+        self.dateComponents.day = 04
+        self.dateComponents.hour = 13
+        self.dateComponents.minute = 8
+        self.dateComponents.second = 0
     }
     
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Divider()
-                NavigationLink {
-                    DayDetailView(details: Day1)
-                        .navigationTitle("Day 1")
-                } label: {
-                    Text("Day 1")
+                Group {
+                    Divider()
+                    NavigationLink {
+                        DayDetailView(details: Day1)
+                            .navigationTitle("Day 1")
+                    } label: {
+                        Text("Day 1")
+                    }
+                    Divider()
+                    NavigationLink {
+                        DayDetailView(details: Day2)
+                            .navigationTitle("Day 2")
+                    } label: {
+                        Text("Day 2")
+                    }
+                    Divider()
+                    NavigationLink {
+                        DayDetailView(details: Day3)
+                            .navigationTitle("Day 3")
+                    } label: {
+                        Text("Day 3")
+                    }
+                    Divider()
+                    NavigationLink {
+                        DayDetailView(details: Day4)
+                            .navigationTitle("Day 4")
+                    } label: {
+                        Text("Day 4")
+                    }
+                    Divider()
                 }
-                Divider()
-                NavigationLink {
-                    DayDetailView(details: Day2)
-                        .navigationTitle("Day 2")
-                } label: {
-                    Text("Day 2")
-                }
-                Divider()
-                NavigationLink {
-                    DayDetailView(details: Day3)
-                        .navigationTitle("Day 3")
-                } label: {
-                    Text("Day 3")
-                }
-                Divider()
-                NavigationLink {
-                    DayDetailView(details: Day4)
-                        .navigationTitle("Day 4")
-                } label: {
-                    Text("Day 4")
-                }
-                Divider()
+                
                 Spacer()
+                
+                Group {
+                    Divider()
+                    let fmt = ISO8601DateFormatter()
+                    let myStartDate = fmt.date(from: "2022-01-10T10:00:46+0000")!
+                    let now = Date.now
+                    HStack(spacing: 2) {
+                        Text("Spora başlayalı")
+                        PassedTimeView(from: myStartDate, to: now)
+                            .foregroundColor(.green)
+                        Text(" oldu!")
+                    }.font(.system(size: 15, weight: .bold))
+                }
+                
+                Group {
+                    Divider()
+                    let fmt = ISO8601DateFormatter()
+                    let myFinishDate = fmt.date(from: "2022-03-29T10:00:46+0000")!
+                    let now = Date.now
+                    HStack(spacing: 2) {
+                        Text("Üyeliğin bitmesine")
+                        PassedTimeView(from: now, to: myFinishDate)
+                            .foregroundColor(.blue)
+                        Text(" kaldı!")
+                    }.font(.system(size: 15, weight: .bold))
+                    Divider()
+                }
+ 
             }
             .navigationBarTitleDisplayMode(.inline)
             .font(.system(size: 45, weight: .bold))
