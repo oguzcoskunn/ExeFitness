@@ -8,26 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		6761C62D27A451B10078B47B /* ExeFitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C62C27A451B10078B47B /* ExeFitnessApp.swift */; };
-		6761C62F27A451B10078B47B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C62E27A451B10078B47B /* ContentView.swift */; };
+		6761C62F27A451B10078B47B /* IntermediateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C62E27A451B10078B47B /* IntermediateView.swift */; };
 		6761C63127A451B20078B47B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6761C63027A451B20078B47B /* Assets.xcassets */; };
 		6761C63427A451B20078B47B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6761C63327A451B20078B47B /* Preview Assets.xcassets */; };
 		6761C63B27A452890078B47B /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C63A27A452890078B47B /* DayDetailView.swift */; };
 		6761C63D27A452C90078B47B /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C63C27A452C90078B47B /* ContentModel.swift */; };
 		6761C63F27A571480078B47B /* ExtraDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C63E27A571480078B47B /* ExtraDetailView.swift */; };
 		6761C64127A581F30078B47B /* CheckBoxFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761C64027A581F30078B47B /* CheckBoxFieldView.swift */; };
+		67A2A509280ACF7600451315 /* AdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A2A508280ACF7600451315 /* AdvancedView.swift */; };
+		67A2A50B280AD63000451315 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A2A50A280AD63000451315 /* ContentView.swift */; };
 		67C74CEE27AEFAC800C59646 /* PassedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C74CED27AEFAC800C59646 /* PassedTimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6761C62927A451B10078B47B /* ExeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6761C62C27A451B10078B47B /* ExeFitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExeFitnessApp.swift; sourceTree = "<group>"; };
-		6761C62E27A451B10078B47B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6761C62E27A451B10078B47B /* IntermediateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateView.swift; sourceTree = "<group>"; };
 		6761C63027A451B20078B47B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6761C63327A451B20078B47B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6761C63A27A452890078B47B /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
 		6761C63C27A452C90078B47B /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		6761C63E27A571480078B47B /* ExtraDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDetailView.swift; sourceTree = "<group>"; };
 		6761C64027A581F30078B47B /* CheckBoxFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxFieldView.swift; sourceTree = "<group>"; };
+		67A2A508280ACF7600451315 /* AdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
+		67A2A50A280AD63000451315 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67C74CED27AEFAC800C59646 /* PassedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassedTimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +65,10 @@
 		6761C62B27A451B10078B47B /* ExeFitness */ = {
 			isa = PBXGroup;
 			children = (
+				67A2A50A280AD63000451315 /* ContentView.swift */,
+				6761C62E27A451B10078B47B /* IntermediateView.swift */,
+				67A2A508280ACF7600451315 /* AdvancedView.swift */,
 				6761C63C27A452C90078B47B /* ContentModel.swift */,
-				6761C62E27A451B10078B47B /* ContentView.swift */,
 				67C74CED27AEFAC800C59646 /* PassedTimeView.swift */,
 				6761C63A27A452890078B47B /* DayDetailView.swift */,
 				6761C63E27A571480078B47B /* ExtraDetailView.swift */,
@@ -152,11 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6761C62F27A451B10078B47B /* ContentView.swift in Sources */,
+				6761C62F27A451B10078B47B /* IntermediateView.swift in Sources */,
 				6761C63D27A452C90078B47B /* ContentModel.swift in Sources */,
 				6761C64127A581F30078B47B /* CheckBoxFieldView.swift in Sources */,
 				6761C63B27A452890078B47B /* DayDetailView.swift in Sources */,
 				6761C62D27A451B10078B47B /* ExeFitnessApp.swift in Sources */,
+				67A2A50B280AD63000451315 /* ContentView.swift in Sources */,
+				67A2A509280ACF7600451315 /* AdvancedView.swift in Sources */,
 				67C74CEE27AEFAC800C59646 /* PassedTimeView.swift in Sources */,
 				6761C63F27A571480078B47B /* ExtraDetailView.swift in Sources */,
 			);
@@ -301,8 +309,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oguzcoskun.ExeFitness;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oguzcoskun.ExeFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -330,8 +338,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = oguzcoskun.ExeFitness;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oguzcoskun.ExeFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
